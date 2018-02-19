@@ -1,2 +1,3 @@
 dist/* linguist-vendored
 dist/main.js linguist-vendored=false
+*.scss linguist-language=SCSS
