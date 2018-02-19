@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+// This file contains custom checkbox styles
+// ----------------------------------------------------------------------------
+
+.custom-checkbox {
+
+  label {
+    position: relative;
+    display: flex;
+    font-weight: $fw-medium;
+    font-size: 13px;
+    color: $color-secondary;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+      border: 1px solid #adaeb8;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      display: none;
+      width: 8px;
+      height: 8px;
+      background-color: $accent-color;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + label:after {
+    display: block;
+  }
+}

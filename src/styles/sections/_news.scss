@@ -1,0 +1,151 @@
+// ----------------------------------------------------------------------------
+// This file contains site news container styles.
+// ----------------------------------------------------------------------------
+
+.section-news {
+  padding-bottom: 80px;
+  background-color: #fff;//$bgc-secondary;
+}
+
+.section-news-featured {
+  background-color: $bgc-secondary;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 767px) {
+    a {
+      order: 1;
+      margin: 0 auto 90px auto;
+    }
+  }
+
+  .row {
+    position: relative;
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+
+    > a {
+      position: absolute;
+      right: 15px;
+      top: -80px;
+    }
+  }
+
+  .row > div:nth-child(4) {
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  .section-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    margin-bottom: 45px;
+    color: $color-tertiary;
+
+    .js-tab {
+      display: flex;
+      margin-right: 5px;
+      cursor: pointer;
+
+      &.active {
+        color: $color-primary;
+      }
+
+      &:after {
+        content: "|";
+        color: $color-tertiary;
+        display: block;
+        margin-left: 5px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.news-item {
+  margin-bottom: 60px;
+  font-size: 13px;
+
+  // Картинка и дата новости
+  .preview {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+    }
+
+    .date {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: $border-rounded;
+      background-color: $accent-color;
+      color: $color-secondary;
+
+      > p {
+        text-align: center;
+        font-weight: $fw-medium;
+        font-size: 12px;
+
+        b {
+          font-weight: $fw-semi-bold;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .h-item {
+    line-height: 1.438;
+  }
+
+  > p {
+    font-weight: $fw-medium;
+    font-size: 13px;
+    line-height: 1.538;
+  }
+
+  a {
+    font-weight: $fw-bold;
+    color: $color-tertiary;
+  }
+}

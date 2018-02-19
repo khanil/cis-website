@@ -1,0 +1,138 @@
+// ----------------------------------------------------------------------------
+// This file contains very basic styles.
+// ----------------------------------------------------------------------------
+
+body {
+  background-color: $bgc-primary;
+  color: $color-primary;
+  font-family: $text-font-stack;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #e0bd12 !important;
+  }
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: $border-rounded;
+  background-color: $accent-color;
+  color: $color-secondary;
+  font-family: $text-font-stack;
+  text-transform: uppercase;
+  font-weight: $fw-semi-bold;
+  font-size: 12px;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: #e0bd12;
+  }
+}
+
+input, textarea {
+  padding: 16px 20px;
+  border: 2px solid $bgc-secondary;
+  border-radius: $border-rounded;
+  background-color: transparent;
+  color: #c1c2cb;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  font-family: $text-font-stack;
+
+  &:hover {
+    border-color: #d6d6d6 !important;
+  }
+
+  &:focus {
+    border-color: $accent-color !important;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: nowrap;
+
+  > input {
+    flex: 1 1 auto;
+    width: 1%;
+  }
+
+  > button {
+    margin-left: -4px;
+  }
+}
+
+.h1,
+.h2,
+.h-item {
+  font-weight: $fw-semi-bold;
+  color: $color-secondary;
+}
+
+.h1 {
+  font-size: 24px;
+}
+
+.h2 {
+  font-size: 20px;
+}
+
+.h-item {
+  font-size: 16px;
+}
+
+p {
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 1.438;
+}
+
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 26px;
+  }
+
+  .h-item {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .h1 {
+    font-size: 30px;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .h-item {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 1320px;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+*:focus {
+  outline: none;
+}

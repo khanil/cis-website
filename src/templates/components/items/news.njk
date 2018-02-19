@@ -1,0 +1,16 @@
+{% macro render(item) %}
+<div class="news-item">
+  <div class="preview">
+    <img src="{{item.src}}" alt="{{item.alt}}">
+    <div class="date">
+      <p>
+        <b>{{item.day}}</b>
+        {{item.month}}
+      </p>
+    </div>
+  </div>
+  <h2 class="h-item">{{item.header}}</h2>
+  <p>{{item.text}}</p>
+  <a href="{{item.link}}">Подробнее</a>
+</div>
+{% endmacro %}

@@ -1,0 +1,26 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+{% import "items/manufacturer.njk" as itemMafucaturers %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render(["Производители"]) }}
+
+<div class="section section-manufacturers">
+  <div class="container">
+    <h1 class="h1 section-header">Производители</h1>
+
+    <p>Мы&nbsp;являемся официальным дистрибьютором следующих <nobr>компаний-производителей</nobr> <nobr>контрольно-измерительного</nobr> и&nbsp;<nobr>контрольно-регулирующего</nobr> оборудования:</p>
+
+    <div class="row">
+      {% for item in manufacturers %}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemMafucaturers.render(item)}}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}

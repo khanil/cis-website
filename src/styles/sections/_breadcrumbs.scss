@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// This file contains site breadcrumbs styles.
+// ----------------------------------------------------------------------------
+
+.section-breadcrumbs {
+  background-color: $bgc-secondary;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: $fw-medium;
+    font-size: 13px;
+    color: $color-tertiary;
+    margin-top: 4.25px;
+    margin-bottom: 4.25px;
+
+    &:after {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 8px;
+      height: 9px;
+      margin-left: 15px;
+      background-image: url('../assets/icon-next.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      color: $color-secondary;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+   }
+}

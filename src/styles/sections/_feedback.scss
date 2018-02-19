@@ -1,0 +1,133 @@
+// ----------------------------------------------------------------------------
+// This file contains feedback section styles.
+// ----------------------------------------------------------------------------
+
+.section-feedback {
+  padding-bottom: 76px;
+
+  .container > p {
+    margin-bottom: 32px;
+
+    @media (min-width: 992px) {
+      width: 85%;
+    }
+  }
+
+  .row > div {
+    margin-bottom: 60px;
+  }
+
+  .pagination {
+    margin-top: 0;
+  }
+}
+
+.feedback-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .feedback {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px;
+    border-radius: $border-rounded;
+    background-color: #f2f3f8;
+    margin-bottom: 35px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: 25px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 24px solid #f2f3f8;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .img-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 134px;
+      height: 134px;
+      border-radius: 50%;
+      border: 4px solid $accent-color;
+
+      @media (min-width: 768px) {
+        margin-right: 50px;
+      }
+    }
+
+    .info-wrapper {
+      margin-top: 20px;
+
+      @media (min-width: 768px) {
+        margin-top: 0;
+        width: 1px;
+        flex-grow: 1;
+      }
+    }
+
+    p {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.571;
+      margin: 0 0 6px 0;
+    }
+
+    a {
+      font-weight: $fw-bold;
+      font-size: 14px;
+      color: $color-tertiary;
+    }
+  }
+
+  .author {
+    &:before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      float: left;
+      width: 18px;
+      height: 18px;
+      margin: -1px 14px 0 0;
+      background-image: url("../assets/icon-left-quote.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:after {
+      content: '';
+      clear: both;
+    }
+
+    .name {
+      display: block;
+      font-weight: $fw-bold;
+      font-size: 16px;
+      color: $color-primary;
+    }
+
+    .post {
+      display: block;
+      padding: 6px 0 6px 32px;
+      font-weight: $fw-medium;
+      font-size: 14px;
+      color: $color-tertiary;
+    }
+  }
+}

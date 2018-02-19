@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------------
+// This file contains site buttons styles.
+// ----------------------------------------------------------------------------
+
+// Dark button
+.btn-dark {
+  background-color: $color-tertiary;
+  color: $color-light;
+
+  &:hover,
+  &:active {
+    background-color: $bgc-tertiary;
+  }
+}
+
+// Light button
+.btn-light {
+  background-color: $bgc-secondary;
+
+  &:hover,
+  &:active {
+    background-color: $color-footer;
+  }
+}

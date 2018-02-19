@@ -1,0 +1,64 @@
+// ----------------------------------------------------------------------------
+// This file contains prodcuts section styles
+// ----------------------------------------------------------------------------
+
+.section-products {
+  padding-bottom: 40px;
+}
+
+.products-category {
+  margin-bottom: 20px;
+
+  > h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 22px 0;
+  }
+
+  .row > div {
+    margin-bottom: 22px;
+  }
+}
+
+.products-item {
+  height: 100%;
+  padding-bottom: 12px;
+  border: 2px solid $bgc-secondary;
+  border-radius: $border-rounded;
+  background-color: $bgc-secondary;
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 196px;
+    background-color: $bgc-primary;
+  }
+
+  .h-item {
+    margin: 15px 20px;
+  }
+}
+
+.section-products-featured {
+  padding-bottom: 60px;
+
+  .row > div {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .row > div:nth-child(4n) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .row > div:nth-child(4n) {
+      display: block;
+    }
+  }
+}

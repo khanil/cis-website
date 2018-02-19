@@ -1,0 +1,29 @@
+{% import "items/news.njk" as itemNews %}
+
+<div class="section section-news-featured">
+  <div class="container">
+    <h1 class="h1 section-header js-tabs">
+      <span class="js-tab active" data-target="#news-featured">Новости</span><span class="js-tab" data-target="#handy-featured">Полезные материалы</span>
+    </h1>
+
+    <div class="row visible" id="news-featured">
+      <a href="./news.html"><button>Смотреть все новости</button></a>
+
+      {% for i in range(0, 4) -%}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemNews.render(newsItem)}}
+      </div>
+      {%- endfor %}
+    </div>
+
+    <div class="row" id="handy-featured">
+      <a href="./news.html"><button>Смотреть все материалы</button></a>
+
+      {% for i in range(0, 4) -%}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemNews.render(handyItem)}}
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>

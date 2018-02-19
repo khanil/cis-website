@@ -1,0 +1,13 @@
+{% macro render(item) %}
+<a href="./catalog.html">
+  <div class="manufacturers-item">
+    <div class="img-wrapper">
+      <img src="{{item.imgSrc}}" alt="{{item.alt}}">
+    </div>
+    <div class="info">
+      <h2 class="h-item">{{item.name}}</h2>
+      <span>{{item.country}}</span>
+    </div>
+  </div>
+</a>
+{% endmacro %}

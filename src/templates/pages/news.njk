@@ -1,0 +1,26 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+{% import "items/news.njk" as itemNews %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render(["Новости"]) }}
+
+<div class="section section-news">
+  <div class="container">
+    <h1 class="h1 section-header">Новости</h1>
+
+    <div class="row">
+      {% for i in range(0, 12) -%}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemNews.render(newsItem)}}
+      </div>
+      {%- endfor %}
+    </div>
+
+    <div class="pagination-container">
+      {% include "pagination.njk" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

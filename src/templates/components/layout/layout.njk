@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/bootstrap-grid.css">
+  {% block importInHead %}{% endblock %}
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  {% include "layout/header.njk" %}
+  {% include "layout/navigation.njk" %}
+
+  {% block content %}{% endblock %}
+
+  {% include "layout/footer.njk" %}
+
+  <script type="text/javascript" src="scripts/main.js"></script>
+  {% block importInBody %}{% endblock %}
+</body>
+</html>

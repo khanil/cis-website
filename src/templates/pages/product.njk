@@ -1,0 +1,227 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+{% import "items/products.njk" as itemProducts %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render([
+  "Продукция",
+  "Манометры и Термометры",
+  "Амиачные манометры",
+  "Манометр ТМ-511 NH3"
+]) }}
+
+<div class="section section-product">
+  <div class="container">
+    <div class="product-preview-box">
+      <a href="#">
+        <div class="product-preview product-preview-big">
+          <img src="./assets/product/2.jpg" alt="">
+        </div>
+      </a>
+      <div class="product-preview-options">
+        <ul>
+          <a href="#">
+            <li class="product-preview product-preview-small">
+              <img src="./assets/product/1.jpg" alt="">
+            </li>
+          </a>
+          <a href="#">
+            <li class="product-preview product-preview-small">
+              <img src="./assets/product/2.jpg" alt="">
+            </li>
+          </a>
+          <a href="#">
+            <li class="product-preview product-preview-small product-preview-video">
+              <img src="./assets/product/3.jpg" alt="">
+            </li>
+          </a>
+          <a href="#">
+            <li class="product-preview product-preview-small">
+              <img src="./assets/product/4.jpg" alt="">
+            </li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="product-print-share">
+        <button class="btn-light">Версия для печати</button>
+        <div class="product-share">
+          Поделиться:
+          <script src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+          <script src="http://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,whatsapp,telegram"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1 class="h1 section-header">
+        <div class="product-actions">
+          <button class="btn-dark">Задать вопрос</button>
+          <button>Запросить цену</button>
+        </div>
+        Манометр ТМ-511 NH3
+      </h1>
+
+      <div class="product-about">
+        <p>Манометры предназначены для измерения избыточного и вакууметрического давления жидкого, газообразного и водного раствора аммиака.</p>
+        <p>Приборы имеют дополнительную температурную шкалу.</p>
+      </div>
+    </div>
+
+    <div class="product-characteristics">
+      <div class="char-column">
+        <ul>
+          <li>
+            <span class="char-label">Диаметр корпуса</span>
+            100, 150 мм
+          </li>
+          <li>
+            <span class="char-label">Класс точности</span>
+            1,5
+          </li>
+          <li>
+            <span class="char-label">Диапазон показаний давлений</span>
+            ТМ  0…0,6 МПа (−30…+10 °C)
+          </li>
+          <li>
+            <span class="char-label">Рабочие диапазоны</span>
+            Постоянная нагрузка: ¾ шкалы<br/>
+            Переменная нагрузка: ⅔ шкалы<br/>
+            Кратковременная нагрузка: 110% шкалы
+          </li>
+          <li>
+            <span class="char-label">Рабочая температура</span>
+            Окружающая среда: −60…+60 °C
+          </li>
+          <li>
+            <span class="char-label">Корпус</span>
+            IP40, хромированная сталь 10
+          </li>
+          <li>
+            <span class="char-label">Кольцо</span>
+            Хромированная сталь 10
+          </li>
+          <li>
+            <span class="char-label">Чувствительный элемент</span>
+            Нержавеющая сталь 08Х17Н13М2
+          </li>
+        </ul>
+      </div>
+      <div class="char-column">
+        <ul>
+          <li>
+            <span class="char-label">Трибко-секторный механизм</span>
+            Нержавеющая сталь 08Х18Н10
+          </li>
+
+          <li>
+            <span class="char-label">Циферблат</span>
+            Алюминий, шкала черная на белом фоне
+          </li>
+
+          <li>
+            <span class="char-label">Стекло</span>
+            Минеральное
+          </li>
+
+          <li>
+            <span class="char-label">Штуцер</span>
+            Нержавеющая сталь 08Х17Н13М2
+          </li>
+
+          <li>
+            <span class="char-label">Присоединение</span>
+            Радиальное
+          </li>
+
+          <li>
+            <span class="char-label">Резьба присоединения</span>
+            G½ или M20×1,5
+          </li>
+
+          <li>
+            <span class="char-label">Межповерочный интервал</span>
+            2 года
+          </li>
+
+          <li>
+            <span class="char-label">Техническая документация</span>
+            ТУ 4212-001-4719015564-2008<br/>
+            ГОСТ 2405-88
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-docs-featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="docs-category">
+          <h2 class="h2">Опросный лист</h2>
+          <ul>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-8">
+         <div class="row">
+           <div class="col-12 col-lg-6">
+             <div class="docs-category">
+              <h2 class="h2">Рекламные материалы</h2>
+              <ul>
+                <li><a href="#">Презентация оборудования РОСМА</a></li>
+                <li><a href="#">Каталог продукции РОСМА</a></li>
+                <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+                <li><a href="#">Презентация оборудования РОСМА</a></li>
+                <li><a href="#">Каталог продукции РОСМА</a></li>
+              </ul>
+            </div>
+           </div>
+           <div class="col-12 col-lg-6">
+             <div class="docs-category docs-category-chunk">
+              <ul>
+                <li><a href="#">Презентация оборудования РОСМА</a></li>
+                <li><a href="#">Каталог продукции РОСМА</a></li>
+                <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+                <li><a href="#">Презентация оборудования РОСМА</a></li>
+                <li><a href="#">Каталог продукции РОСМА</a></li>
+              </ul>
+            </div>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-products-featured">
+  <div class="container">
+    <h2 class="h2 section-header">Возможно Вас заинтересуют</h1>
+
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemProducts.render(catalogItemTwo)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemProducts.render(catalogItemTwo)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemProducts.render(catalogItemThree)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemProducts.render(catalogItemThree)}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}
+
+{% block importInBody %}
+{% endblock %}

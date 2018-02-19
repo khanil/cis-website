@@ -1,0 +1,73 @@
+// ----------------------------------------------------------------------------
+// This file contains manufactureres slider section styles.
+// ----------------------------------------------------------------------------
+
+.section-manufacturers-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 245px;
+  background-color: $bgc-primary;
+}
+
+#manufacturers-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    min-width: 240px;
+    filter: gray;
+    filter: grayscale(1);
+
+    &:hover {
+      filter: none;
+    }
+  };
+
+  .slick-list {
+    margin: 0 28px;
+  }
+
+  &.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 28px;
+    height: 35px;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/icon-next.svg");
+      background-size: cover;
+      background-reapeat: no-repeat;
+    }
+
+    &:hover {
+      transform: scale(1.1) translate(0, -45%);
+
+      &:before {
+        background-image: url("../assets/icon-next-hovered.svg");
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-next {
+    right: 0;
+  }
+}

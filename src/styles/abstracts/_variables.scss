@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// ----------------------------------------------------------------------------
+
+// Colors
+// ------
+// Accent color
+$accent-color: #ffd505;
+
+// Background colors
+$bgc-primary: #fff;
+$bgc-secondary: #f0f1f8;
+$bgc-tertiary: #323444;
+
+// Text colors
+$color-primary: #393939;
+$color-secondary: #1e1e1e;
+$color-tertiary: #6a6c7c;
+$color-light: #fff;
+$color-footer: #cfd2e5;
+
+// Fonts
+// -----
+// Regular font family
+$text-font-stack: 'Montserrat', sans-serif;
+
+// Font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+// Other
+// -----
+$border-rounded: 3px;

@@ -1,0 +1,72 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render(["Документация"]) }}
+
+<div class="section section-docs">
+  <div class="container">
+    <h1 class="h1 section-header">Документация</h1>
+
+    <p>Наша компания&nbsp;&mdash; <nobr>ООО &laquo;Си Ай Эс Автоматизация&raquo;</nobr> поставляет на&nbsp;российский рынок промышленное <nobr>контрольно-измерительное</nobr> и&nbsp;<nobr>контрольно-регулирующее</nobr> оборудование с&nbsp;2001 года, а&nbsp;также проектированием и&nbsp;инжинирингом автоматизированных систем управления технологическими процессами в&nbsp;различных отраслях промышленности.</p>
+
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="docs-category">
+          <h2 class="h2">Лицензии</h2>
+          <ul>
+            <li><a href="#">Барьеры искробезопасности</a></li>
+            <li><a href="#">Светодиоды, счетчики, измерители скорости</a></li>
+            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-category">
+          <h2 class="h2">Сертификаты</h2>
+          <ul>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="docs-category">
+          <h2 class="h2">Авторизационные письма</h2>
+          <ul>
+            <li><a href="#">Авторизационное письмо AMETEK Power Instruments</a></li>
+            <li><a href="#">Авторизационное письмо Magnetrol</a></li>
+            <li><a href="#">Авторизационное письмо Pepperl+Fuchs</a></li>
+            <li><a href="#">Авторизационное письмо RÜEGER</a></li>
+            <li><a href="#">Авторизационное письмо United Electric Controls</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-category">
+          <h2 class="h2">Рекламные материалы</h2>
+          <ul>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
+            <li><a href="#">Презентация оборудования РОСМА</a></li>
+            <li><a href="#">Каталог продукции РОСМА</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}

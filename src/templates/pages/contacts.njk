@@ -1,0 +1,133 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render(["Контакты"]) }}
+
+<div class="section section-contacts">
+  <div class="container">
+    <h1 class="h1 section-header">Контакты</h1>
+
+    <div class="row row-contacts">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="contacts contacts-phone">
+              <span>Телефон/Факс (многоканальный):</span>
+              <p>+7 (495) 748-78-13</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="contacts contacts-phone">
+              <span>Дополнительные телефоны:</span>
+              <p>+7 (495) 964-18-92<br>+7 (495) 962-05-64</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="contacts contacts-mail">
+              <span>Электронная почта для запросов:</span>
+              <p>sales@cis-automation.ru</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="contacts contacts-mail">
+              <span>Обратная связь, отзывы:</span>
+              <p>general@cis-automation.ru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div id="map-caption" class="contacts contacts-address">
+          <span>Адрес:</span>
+          <p>
+            Краснобогатырская улица, 89с1, офис 600
+            <span>Москва, Россия, 107076</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+</div>
+
+<div class="section section-feedback-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
+        <h2 class="form-header">Для связи с нами заполните форму ниже, оставив свои контактные данные</h2>
+        <form action="" id="feedback-form">
+          <div class="row">
+            <div class="col-12 col-lg-6 inputs-wrapper">
+              <label>Ваше имя:</label>
+              <input type="text" name="name" placeholder="Введите ваше имя">
+              <label>Организация:</label>
+              <input type="text" name="name" placeholder="Введите название вашей огранизации">
+              <label>Email/Телефон:</label>
+              <input type="text" name="name" placeholder="Введите email или телефон для обратной связи">
+            </div>
+            <div class="col-12 col-lg-6 inputs-wrapper">
+              <label>Сообщение:</label>
+              <textarea type="text" name="name" placeholder="Напишите ваше сообщение"></textarea>
+              <div class="captcha-input">
+                <input type="text" name="name" placeholder="Введите код с картинки"></textarea>
+                <div class="captcha">
+                  <!-- Место для капчи -->
+                  <img src="./assets/captcha.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-checkbox">
+            <input type="checkbox" id="rosma">
+            <label for="rosma">Нажимая кнопку &laquo;Отправить&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных, в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;27.07.2006 года &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo;, на&nbsp;условиях и&nbsp;для целей, определенных в&nbsp;Согласии на&nbsp;обработку персональных данных</label>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}
+
+{% block importInBody %}
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+  ymaps.ready(init);
+  var myMap;
+
+  function init(){
+    myMap = new ymaps.Map("map", {
+      center: [55.80084373, 37.71567049],
+      controls: [],
+      zoom: 16,
+    });
+
+    myMap.behaviors.disable('scrollZoom');
+
+    myMap.controls.add('zoomControl', {
+      float: 'right',
+    });
+    myMap.controls.add('fullscreenControl');
+
+    var myPlacemark = new ymaps.Placemark([55.80085300, 37.71378221],
+      {
+        iconCaption: 'Краснобогатырская улица, 89с1',
+      },
+      {
+        preset: 'islands#blueCircleDotIconWithCaption',
+        iconCaptionMaxWidth: '200'
+      }
+    );
+    myMap.geoObjects.add(myPlacemark);
+  }
+</script>
+{% endblock %}

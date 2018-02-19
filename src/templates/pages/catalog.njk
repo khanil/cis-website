@@ -1,0 +1,52 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+{% import "items/catalog.njk" as itemCatalog %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render([
+  "Продукция",
+  "Манометры и термометры",
+  "Термометры давления газа"
+]) }}
+
+<div class="section section-catalog">
+  <div class="container">
+    <h1 class="h1 section-header">Газовые термометры</h1>
+
+    {% include "filters-bar.njk" %}
+
+    <div class="row catalog-items">
+      {% for i in range(0, 3) -%}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemCatalog.render(catalogItemOne)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemCatalog.render(catalogItemTwo)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemCatalog.render(catalogItemThree)}}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        {{itemCatalog.render(catalogItemThree)}}
+      </div>
+      {%- endfor %}
+    </div>
+
+    <div class="pagination-container">
+      {% include "pagination.njk" %}
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="footer-text">
+          <p>В&nbsp;системах противоаварийной автоматической защиты (ПАЗ) при дублировании аналогового датчика, когда необходимо не&nbsp;измерять параметр, а&nbsp;только отслеживать его выход за&nbsp;установленные пределы и&nbsp;выдавать дискретный сигнал&nbsp;&mdash; это задача реле.</p>
+          <p>В&nbsp;случаях, когда необходимо получить информацию о&nbsp;состоянии технологического оборудования (пуск, останов, аварийный останов, блокировка) при отсутствии внешнего источника питания для прибора&nbsp;&mdash; данную задачу решает электромеханическое реле, не&nbsp;требующее питания.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}

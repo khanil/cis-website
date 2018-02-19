@@ -1,0 +1,17 @@
+{% macro render(item) %}
+<div class="feedback-item">
+  <div class="feedback">
+    <div class="img-wrapper">
+      <img src="{{item.src}}" alt="{{item.alt}}">
+    </div>
+    <div class="info-wrapper">
+      <p>{{item.text}}</p>
+      <a href="#">Подробнее</a>
+    </div>
+  </div>
+  <div class="author">
+    <span class="name">{{item.author}}</span>
+    <span class="post">{{item.job}}</span>
+  </div>
+</div>
+{% endmacro %}

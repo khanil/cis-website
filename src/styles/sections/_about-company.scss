@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------------------
+// This file contains site about section styles.
+// ----------------------------------------------------------------------------
+
+.section-about-company {
+  display: flex;
+  padding-bottom: 40px;
+  background-color: $bgc-secondary;
+
+  .section-header {
+    margin-top: 68px;
+    margin-bottom: 25px;
+  }
+
+  .float-wrapper {
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  img {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+    }
+
+    @media (min-width: 992px) {
+      padding-left: 70px;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 13px;
+    text-align: justify;
+  }
+
+  button {
+    display: block;
+    margin: 40px auto 35px auto;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

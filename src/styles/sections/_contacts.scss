@@ -1,0 +1,120 @@
+// ----------------------------------------------------------------------------
+// This file contains contacts section styles
+// ----------------------------------------------------------------------------
+
+.section-contacts {
+  padding-bottom: 58px;
+
+  > .container {
+    position: relative;
+  }
+
+  .row-contacts {
+    margin-bottom: 18px;
+  }
+
+  .contacts {
+    > span {
+      display: flex;
+      align-items: center;
+      font-weight: $fw-semi-bold;
+      font-size: 14px;
+      color: $color-tertiary;
+
+      &:before {
+        content: '';
+        display: block;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        margin-right: 12px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    p {
+      font-weight: $fw-semi-bold;
+      font-size: 18px;
+      color: $color-primary;
+      margin-top: 9px;
+      padding-left: 22px;
+    }
+  }
+
+  .contacts-phone {
+    > span {
+      &:before {
+        background-image: url("../assets/icon-phone.svg");
+      }
+    }
+  }
+
+  .contacts-mail {
+     > span {
+      &:before {
+        background-image: url("../assets/icon-mail.svg");
+      }
+    }
+  }
+
+  .contacts-address {
+     > span {
+      &:before {
+        background-image: url("../assets/icon-place.svg");
+      }
+    }
+
+    p {
+      font-size: 16px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        font-weight: $fw-medium;
+        color: #868895;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+      width: 405px;
+      background-color: $bgc-primary;
+      padding: 20px;
+      position: absolute;
+      bottom: -144px;
+      left: 15px;
+      z-index: 10;
+      border-radius: 3px;
+
+      p {
+        padding: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 992px) {
+      left: 35px;
+    }
+  }
+}
+
+#map {
+  height: 320px;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+
+  iframe {
+    height: inherit;
+  }
+
+  @media (min-width: 768px) {
+    height: 350px;
+  }
+
+  .ymaps-2-1-60-controls__control {
+    right: 10px !important;
+    left: auto !important;
+  }
+}

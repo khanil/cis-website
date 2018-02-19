@@ -1,0 +1,120 @@
+// ----------------------------------------------------------------------------
+// This file contains site footer styles.
+// ----------------------------------------------------------------------------
+
+body > footer {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-bottom: 12px;
+  background-color: $bgc-tertiary;
+  color: $color-light;
+  font-size: 14px;
+
+  &:after {
+    @media (min-width: 768px) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 65%;
+      z-index: -1;
+      width: 200%;
+      height: 100%;
+      background-color: #343646;
+      transform: skew(-29deg);
+    }
+  }
+
+  p {
+    font-weight: $fw-medium;
+  }
+
+  > .container > .row:first-child {
+    align-items: flex-end;
+    margin-bottom: 15px;
+  }
+}
+
+.footer-contacts {
+  padding: 32px 0px 40px 0;
+  margin-bottom: 50px;
+  background-color: #292b3a;
+  text-align: center;
+
+  span {
+    display: block;
+    margin-top: 13px;
+    color: $color-footer;
+    font-size: 13px;
+  }
+
+  p {
+    margin: 3px 0 0 0;
+    font-size: 14px;
+    line-height: 1.231;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  @media (min-width: 992px) {
+    padding-bottom: 0px;
+  }
+}
+
+.footer-logo {
+  display: block;
+  width: 184px;
+  height: 120px;
+  background-image: url("../assets/logo-white.png");
+  background-size: cover;
+}
+
+.subscribe {
+  p {
+    font-size: 13px;
+    line-height: 1.231;
+
+    @media (min-width: 768px) {
+      text-align: end;
+    }
+  }
+
+  .input-group {
+    height: 30px;
+    margin-top: 26px;
+
+    > input,
+    > button {
+      padding: 4px 10px;
+    }
+
+    > input {
+      border-color: fade-out($bgc-secondary, .75);
+      border-width: 1px;
+      color: #bdc0d5;
+      font-size: 13px;
+    }
+  }
+}
+
+.copyright,
+.created-by {
+  color: #e3e4ef;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.created-by {
+  @media (min-width: 768px) {
+    text-align: end;
+  }
+
+  a {
+    color: $accent-color;
+    font-weight: $fw-medium;
+  }
+}

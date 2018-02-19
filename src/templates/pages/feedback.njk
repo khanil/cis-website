@@ -1,0 +1,30 @@
+{% import "layout/breadcrumbs.njk" as breadcrumbs %}
+{% import "items/feedback.njk" as itemFeedback %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+{{ breadcrumbs.render(["Отзывы"]) }}
+
+<div class="section section-feedback">
+  <div class="container">
+    <h1 class="h1 section-header">Отзывы</h1>
+
+    <p>Мы&nbsp;являемся официальным дистрибьютором следующих <nobr>компаний-производителей</nobr> <nobr>контрольно-измерительного</nobr> и&nbsp;<nobr>контрольно-регулирующего</nobr> оборудования:</p>
+
+    <div class="row">
+      {% for i in range(0, 4) -%}
+      <div class="col-12 col-sm-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0">
+        {{itemFeedback.render(feedbackItem)}}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="pagination-container">
+      {% include "pagination.njk" %}
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}

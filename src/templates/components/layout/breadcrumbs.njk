@@ -1,0 +1,10 @@
+{% macro render(items) %}
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <a href="./index.html">Главная</a>
+    {% for item in items %}
+    <a href="#">{{ item }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

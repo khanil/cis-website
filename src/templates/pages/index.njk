@@ -1,0 +1,180 @@
+{% extends "layout/layout.njk" %}
+{% import "items/catalog-new.njk" as itemCatalog %}
+
+{% block importInHead %}
+<link rel="stylesheet" type="text/css" href="./libs/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css"/>
+{% endblock %}
+
+{% block content %}
+<div class="section section-jumbotron">
+  <div id="jumbotron-slider">
+    <div class="jumbotron-slide" style="background-image: url(./assets/slide1.jpg)">
+      <a href="#">
+        <div class="caption container">
+          <p>
+            <b>Манометры на высокое давление</b>
+            от крупнейшго отечественного производителя «РОСМА»
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="jumbotron-slide" style="background-image: url(./assets/slide1.jpg)">
+      <a href="#">
+        <div class="caption container">
+          <p>
+            <b>Манометры на высокое давление</b>
+            от крупнейшго отечественного производителя «РОСМА»
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="jumbotron-slide" style="background-image: url(./assets/slide1.jpg)">
+      <a href="#">
+        <div class="caption container">
+          <p>
+            <b>Манометры на высокое давление</b>
+            от крупнейшго отечественного производителя «РОСМА»
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="jumbotron-slide" style="background-image: url(./assets/slide1.jpg)">
+      <a href="#">
+        <div class="caption container">
+          <p>
+            <b>Манометры на высокое давление</b>
+            от крупнейшго отечественного производителя «РОСМА»
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="jumbotron-slide" style="background-image: url(./assets/slide1.jpg)">
+      <a href="#">
+        <div class="caption container">
+          <p>
+            <b>Манометры на высокое давление</b>
+            от крупнейшго отечественного производителя «РОСМА»
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="container slider-btn-container">
+    <!-- To remain buttons in container size -->
+    <button type="button" class="slick-prev" id="jumbotron-slider-prev">Previous</button>
+    <button type="button" class="slick-next" id="jumbotron-slider-next">Next</button>
+  </div>
+</div>
+
+<div class="section section-about-company">
+  <div class="container">
+    <h1 class="h1 section-header">О компании</h1>
+
+    <div class="float-wrapper">
+      <img src="./assets/workers.jpg" alt="Proud workers">
+      <p>Компания ООО &laquo;Си Ай Эс Автоматизация&raquo; поставляет на&nbsp;российский рынок интеллектуальные реле (сигнализаторы) температуры и&nbsp;давления, перепада давлений производства United Electric Controls, предназначенные для работы в&nbsp;различных условиях.</p>
+      <p>Компания оказывает помощь в&nbsp;выборе других средств промышленной автоматизации, таких как барьеров искрозащиты, индуктивных, емкостных, магнитных датчиков, поворотных шифраторов Pepperl+Fuchs, реле уровня и&nbsp;уровнемеры Magnetrol, реле расхода и&nbsp;расходомеры TA2 для газовых сред.</p>
+      <p>Компания оказывает услуги по&nbsp;поддержанию работоспособности и&nbsp;конфигурирование оборудования верхнеого уровня и&nbsp;систем противоаварийных защит.</p>
+      <a href="#"><button>Подробнее</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="section section-manufacturers-slider">
+  <div class="container">
+    <div id="manufacturers-slider">
+      {% for item in manufacturers %}
+      <div>
+        <a href="#">
+          <img src="{{item.imgSrc}}" alt="{{item.alt}}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="section section-catalog-new">
+  <div class="container">
+    <div class="wrapper-header">
+      <h2 class="h1 section-header">Новинки каталогов</h2>
+      <a href="./products.html"><button>Смотреть всю продукцию</button></a>
+    </div>
+
+    <div id="catalog-slider">
+      {% for item in catalogNew %}
+        <div>{{itemCatalog.render(item)}}</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include "layout/news-featured.njk" %}
+{% endblock %}
+
+{% block importInBody %}
+<script type="text/javascript" src="./libs/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./libs/slick/slick.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#jumbotron-slider').slick({
+      dots: true,
+      prevArrow: "#jumbotron-slider-prev",
+      nextArrow: "#jumbotron-slider-next",
+      autoplay: true,
+      autoplaySpeed: 10000,
+    });
+
+    $('#catalog-slider').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 5,
+      responsive: [
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 1070,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 848,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+    $('#manufacturers-slider').slick({
+      slidesToShow: 5,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+  });
+</script>
+{% endblock %}

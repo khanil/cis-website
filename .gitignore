@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# Dist files that may be builded
+dist/*.html
+dist/styles/main.css
+
+# Logs
+logs
+*.log
+npm-debug.log*

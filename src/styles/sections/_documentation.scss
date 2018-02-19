@@ -1,0 +1,101 @@
+// ----------------------------------------------------------------------------
+// This file contains documentation section styles
+// ----------------------------------------------------------------------------
+
+.section-docs {
+  padding-bottom: 60px;
+
+  .container {
+
+    > p {
+      line-height: 1.438;
+    }
+  }
+}
+
+.docs-category {
+
+  ul {
+    margin-left: 26px;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+
+  a {
+    display: flex;
+    align-items: flex-start;
+    font-weight: $fw-medium;
+    font-size: 16px;
+    line-height: 1.35;
+    color: $color-tertiary;
+
+    &:before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 14px;
+      height: 17px;
+      margin-right: 12px;
+      background-image: url("../assets/icon-doc.svg");
+      background-size: cover;
+      background-repeate: no-repeat;
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../assets/icon-doc-hovered.svg");
+      }
+    }
+  }
+}
+
+.section-docs-featured {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-top: 28px;
+  padding-bottom: 36px;
+  background-color: $bgc-secondary;
+
+  &:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+    background-color: #ecedf4;
+    transform: skew(-29deg);
+
+    @media (min-width: 768px) {
+      display: block;
+      left: 40%;
+    }
+
+    @media (min-width: 992px) {
+      display: block;
+      left: 65%;
+    }
+  }
+
+  ul {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+
+.docs-category-chunk {
+
+  @media (min-width: 992px) {
+    padding-top: 47px;
+  }
+
+  @media (max-width: 991px) {
+    ul {
+      margin-top: -6px;
+    }
+  }
+}
