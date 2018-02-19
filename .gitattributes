@@ -1,0 +1,2 @@
+dist/* linguist-vendored
+dist/main.js linguist-vendored=false
