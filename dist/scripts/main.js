@@ -1,50 +1,49 @@
+'use strict';
+
 // js toggler
-const togglerClass = '.js-toggler';
+var togglerClass = '.js-toggler';
 
-const togglers = document.querySelectorAll(togglerClass);
+var togglers = document.querySelectorAll(togglerClass) || [];
 
-togglers.forEach((toggle) => {
-  const target = toggle.getAttribute('data-target');
-
-  if (!target)
-    return;
-
+for (var i = 0; i < togglers.length; i++) {
+  var toggle = togglers[i];
+  var target = toggle.getAttribute('data-target');
+  if (!target) continue;
   toggle.addEventListener('mousedown', handleToggle);
-});
+}
 
 function handleToggle(event) {
-  const targetId = event.currentTarget.getAttribute('data-target');
-  const target = document.querySelector(targetId);
-  if (!target)
-    return;
+  var targetId = event.currentTarget.getAttribute('data-target');
+  var target = document.querySelector(targetId);
+  if (!target) return;
 
   target.classList.toggle('visible');
   event.currentTarget.classList.toggle('active');
 }
 
 // js tabs
-const tabsClass = '.js-tabs';
+var tabsClass = '.js-tabs';
 
-const tabs = document.querySelectorAll(tabsClass);
+var tabs = document.querySelectorAll(tabsClass) || [];
 
-tabs.forEach((tab) => {
+for (var j = 0; j < tabs.length; j++) {
+  var tab = tabs[j];
   tab.addEventListener('mousedown', handleTabClick);
-});
+}
 
 function handleTabClick(event) {
-  const nextTab = event.target;
+  var nextTab = event.target;
 
-  if (!nextTab.classList.contains('js-tab'))
-    return;
+  if (!nextTab.classList.contains('js-tab')) return;
 
-  const container = event.currentTarget;
-  const activeTab = container.querySelector('.js-tab.active');
+  var container = event.currentTarget;
+  var activeTab = container.querySelector('.js-tab.active');
 
   if (activeTab) {
-    const activeTabTarget = activeTab.getAttribute('data-target');
+    var activeTabTarget = activeTab.getAttribute('data-target');
 
     if (activeTabTarget) {
-      const activeTabContent = document.querySelector(activeTabTarget);
+      var activeTabContent = document.querySelector(activeTabTarget);
 
       if (activeTabContent) {
         activeTabContent.classList.remove('visible');
@@ -55,10 +54,10 @@ function handleTabClick(event) {
   }
 
   nextTab.classList.add('active');
-  const nextTabTarget = nextTab.getAttribute('data-target');
+  var nextTabTarget = nextTab.getAttribute('data-target');
 
   if (nextTabTarget) {
-    const nextTabContent = document.querySelector(nextTabTarget);
+    var nextTabContent = document.querySelector(nextTabTarget);
 
     if (nextTabContent) {
       nextTabContent.classList.add('visible');
